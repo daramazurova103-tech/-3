@@ -1,50 +1,87 @@
-<div class="page">
-  <h1 class="page__title">Панель с вкладками</h1>
-  <div class="tabs">
-    <!-- Панель вкладок -->
-    <div class="tabs__nav">
-      <button class="tabs__btn active" data-tab="tab-1" type="button">Вкладка 1</button>
-      <button class="tabs__btn" data-tab="tab-2" type="button">Вкладка 2</button>
-      <button class="tabs__btn" data-tab="tab-3" type="button">Вкладка 3</button>
-    </div>
+body {
+  font-family: sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 32px;
+}
 
-    <!-- Область с контентом -->
-    <div class="tabs__content-container">
-      <!-- Вкладка 1 -->
-      <div class="tabs__content active" id="tab-1">
-        <div class="info-card">
-          <img src="image1.jpg" alt="Пример изображения для первой вкладки" class="info-card__img">
-          <div class="info-card__body">
-            <h3 class="info-card__title">Заголовок карточки 1</h3>
-            <p class="info-card__text">Информационная карточка, содержащая описание первой вкладки.</p>
-            <button class="info-card__btn" type="button">Действие 1</button>
-          </div>
-        </div>
-      </div>
+.page__title {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
 
-      <!-- Вкладка 2 -->
-      <div class="tabs__content" id="tab-2">
-        <div class="info-card">
-          <img src="image2.jpg" alt="Пример изображения для второй вкладки" class="info-card__img">
-          <div class="info-card__body">
-            <h3 class="info-card__title">Заголовок карточки 2</h3>
-            <p class="info-card__text">Информационная карточка, содержащая описание второй вкладки.</p>
-            <button class="info-card__btn" type="button">Действие 2</button>
-          </div>
-        </div>
-      </div>
+.tabs__nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
 
-      <!-- Вкладка 3 -->
-      <div class="tabs__content" id="tab-3">
-        <div class="info-card">
-          <img src="image3.jpg" alt="Пример изображения для третьей вкладки" class="info-card__img">
-          <div class="info-card__body">
-            <h3 class="info-card__title">Заголовок карточки 3</h3>
-            <p class="info-card__text">Информационная карточка, содержащая описание третьей вкладки.</p>
-            <button class="info-card__btn" type="button">Действие 3</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+.tabs__btn {
+  background-color: #252525;
+  color: #b0b0b0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tabs__btn:hover {
+  color: #ffffff;
+}
+
+.tabs__btn.active {
+  background-color: #ffd600;
+  color: #000000;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content.active {
+  display: block;
+}
+
+.info-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.info-card__img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.info-card__title {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.info-card__text {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin: 0 0 16px 0;
+}
+
+.info-card__btn {
+  background-color: #ffd600;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.info-card__btn:hover {
+  background-color: #ffea00;
+}
